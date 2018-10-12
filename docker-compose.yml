@@ -21,7 +21,7 @@ nextcloud_web:
     - APC_SHM_SIZE=128M
     - OPCACHE_MEM_SIZE=128
     - CRON_PERIOD=15m
-    - TZ=Aisa/Shanghai
+    - TZ=Asia/Shanghai
     - ADMIN_USER=admin
     - ADMIN_PASSWORD=123456
     - DOMAIN=0.0.0.0
@@ -45,7 +45,7 @@ nginx:
   ports:
     - "80:80"
   volumes:
-     - /wardpress:/var/www/html 
+     - ./wardpress:/var/www/html 
      - ./0.0.0.0.conf:/etc/nginx/conf.d/0.0.0.0.conf
   links:
     - nextcloud_web
